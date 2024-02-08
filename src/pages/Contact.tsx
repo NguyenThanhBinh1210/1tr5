@@ -7,7 +7,7 @@ const Contact = () => {
       <p className='text-gray-700 mb-4 text-center'>
         Please email us if you have any queries about the site, advertising, or anything else.
       </p>
-      <img className='w-[250px] mx-auto ' src={email} alt="email" />
+      <img className='w-[250px] mx-auto ' src={email} alt='email' />
       <a href='' className='mb-4 font-bold text-gray-700 block hover:underline text-center italic'>
         abbasystore1m@gmail.com
       </a>

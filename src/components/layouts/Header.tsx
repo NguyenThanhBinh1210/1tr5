@@ -20,8 +20,9 @@ const Header = () => {
         </svg>
 
         <div
-          className={`absolute md:relative md:shadow-none z-10 top-full bg-white w-full md:w-max shadow md:left-0 left-1/2 -translate-x-1/2 md:-translate-x-0 ${showNav ? '!flex' : 'hidden'
-            } md:flex hidden flex-col md:flex-row items-center gap-3`}
+          className={`absolute md:relative md:shadow-none z-10 top-full bg-white w-full md:w-max shadow md:left-0 left-1/2 -translate-x-1/2 md:-translate-x-0 ${
+            showNav ? '!flex' : 'hidden'
+          } md:flex hidden flex-col md:flex-row items-center gap-3`}
         >
           <Link className='py-3 text-sm font-bold hover:text-gray-600 text-gray-400' to={'/'}>
             Cloud Marketing
