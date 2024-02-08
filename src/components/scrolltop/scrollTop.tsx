@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom'
 
 const ScrollToTop = () => {
   const [showButton, setShowButton] = useState<boolean>(false)
-  console.log(showButton)
   const { pathname } = useLocation()
   const scrollToTop = () => {
     window.scrollTo({
@@ -31,7 +30,7 @@ const ScrollToTop = () => {
   return (
     <>
       {showButton && (
-        <button onClick={scrollToTop} className=' bg-[#0000007e] p-1 rounded fixed bottom-10 right-10'>
+        <button onClick={scrollToTop} className=' bg-[#0000007e] z-10 p-1 rounded fixed bottom-10 right-10'>
           <svg
             className='w-6 h-6 text-white '
             aria-hidden='true'

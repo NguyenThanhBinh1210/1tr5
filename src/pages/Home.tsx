@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <div className='max-w-[1024px] bg-white mx-auto'>
-      <div className='p-3 grid grid-cols-3 gap-5 pb-10 border-b'>
+      <div className='p-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pb-10 border-b'>
         {[1, 1, 1, 1, 1, 1, 1, 1, 1].map((item, index) => (
           <div key={item + index} className='rounded border cursor-pointer'>
             <div className='h-[200px]'>

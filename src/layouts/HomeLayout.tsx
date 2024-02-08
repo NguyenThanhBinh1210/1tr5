@@ -4,7 +4,7 @@ import { LayoutPropsInterface } from '~/types/base.type'
 
 const HomeLayout = ({ children }: LayoutPropsInterface) => {
   return (
-    <div>
+    <div className='mb-40'>
       <Header></Header>
       {children}
       <Footer></Footer>

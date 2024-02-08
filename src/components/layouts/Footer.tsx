@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='max-w-[1024px]  mx-auto'>
+    <div className='max-w-[1024px]  mx-auto border-t'>
       <div className='justify-center flex gap-3 bg-white'>
         <Link className='py-3 text-sm font-bold hover:text-gray-600 text-gray-400' to={'/'}>
           Home
