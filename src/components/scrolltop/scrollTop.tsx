@@ -31,8 +31,22 @@ const ScrollToTop = () => {
   return (
     <>
       {showButton && (
-        <button onClick={scrollToTop} className='bg-red-400 fixed bottom-10 right-10'>
-          Top
+        <button onClick={scrollToTop} className=' bg-[#0000007e] p-1 rounded fixed bottom-10 right-10'>
+          <svg
+            className='w-6 h-6 text-white '
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 24 24'
+          >
+            <path
+              stroke='currentColor'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='1.5'
+              d='m16 17-4-4-4 4m8-6-4-4-4 4'
+            />
+          </svg>
         </button>
       )}
     </>

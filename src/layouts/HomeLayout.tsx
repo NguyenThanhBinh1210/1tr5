@@ -1,7 +1,15 @@
+import Footer from '~/components/layouts/Footer'
+import Header from '~/components/layouts/Header'
 import { LayoutPropsInterface } from '~/types/base.type'
 
 const HomeLayout = ({ children }: LayoutPropsInterface) => {
-  return <div>{children}</div>
+  return (
+    <div>
+      <Header></Header>
+      {children}
+      <Footer></Footer>
+    </div>
+  )
 }
 
 export default HomeLayout

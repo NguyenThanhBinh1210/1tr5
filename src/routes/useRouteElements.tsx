@@ -1,60 +1,61 @@
-import { Navigate, Outlet, useRoutes } from 'react-router-dom'
+import { useRoutes } from 'react-router-dom'
 import NotFound from '~/pages/NotFound'
-import Register from '~/pages/Register'
-import Login from '~/pages/Login'
-import { AppContext } from '~/contexts/app.context'
-import LoginLayout from '~/layouts/LoginLayout'
+
 import HomeLayout from '~/layouts/HomeLayout'
 import Home from '~/pages/Home'
-import { useContext } from 'react'
+import Contact from '~/pages/Contact'
+import Private from '~/pages/Private'
+import Term from '~/pages/Term'
+import About from '~/pages/About'
 
 const useRouteElements = () => {
-  function ProtecedRoute() {
-    const { isAuthenticated } = useContext(AppContext)
-    return isAuthenticated ? <Outlet /> : <Navigate to='login' />
-  }
-  function RejectedRoute() {
-    const { isAuthenticated } = useContext(AppContext)
-    return !isAuthenticated ? <Outlet /> : <Navigate to='/' />
-  }
   const routeElements = useRoutes([
     {
-      path: '',
-      element: <RejectedRoute />,
-      children: [
-        {
-          path: 'login',
-          element: (
-            <LoginLayout>
-              <Login />
-            </LoginLayout>
-          )
-        },
-        {
-          path: 'register',
-          element: (
-            <LoginLayout>
-              <Register />
-            </LoginLayout>
-          )
-        }
-      ]
+      path: '/',
+      index: true,
+      element: (
+        <HomeLayout>
+          <Home />
+        </HomeLayout>
+      )
     },
     {
-      path: '',
-      element: <ProtecedRoute />,
-      children: [
-        {
-          path: '/',
-          index: true,
-          element: (
-            <HomeLayout>
-              <Home />
-            </HomeLayout>
-          )
-        }
-      ]
+      path: '/contact',
+
+      element: (
+        <HomeLayout>
+          <Contact />
+        </HomeLayout>
+      )
     },
+    {
+      path: '/private',
+
+      element: (
+        <HomeLayout>
+          <Private />
+        </HomeLayout>
+      )
+    },
+    {
+      path: '/term',
+
+      element: (
+        <HomeLayout>
+          <Term />
+        </HomeLayout>
+      )
+    },
+    {
+      path: '/about',
+
+      element: (
+        <HomeLayout>
+          <About />
+        </HomeLayout>
+      )
+    },
+
     {
       path: '*',
       element: <NotFound />
